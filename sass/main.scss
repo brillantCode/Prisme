@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+}
+
+.menu {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__content {
+        width: 10%;
+        height: 90px;
+        font-size: 2em;
+        margin: 0 3% 0 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+    }
+    &__p {
+        width: 10%;
+        height: 90px;
+        font-size: 2em;
+        margin: 0 0 0 3%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        transition: .5s ease-out;
+        animation: fade-in 3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            color: rgb(94,94,94);
+        }
+    }
+}
+
+.acceuil {
+    width: 100%;
+    height: 1000px;
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+    &__bg {
+        background: radial-gradient(circle at 0% 0%, #FFEBAA 0%, 17.5%, rgba(255,235,170,0) 35%), radial-gradient(circle at 8.9599609375% 78.15755208333334%, #FFEBAA 0%, 17.5%, rgba(255,235,170,0) 35%), radial-gradient(circle at 84.39778645833333% 73.87044270833333%, #000000 0%, 22.750000000000004%, rgba(0,0,0,0) 35%), radial-gradient(circle at 100% 0%, #FFEBAA 0%, 7.699999999999999%, rgba(255,235,170,0) 11%), radial-gradient(circle at 48.9013671875% 49.521484375%, rgba(255,255,255,0) 0%, 100%, rgba(255,255,255,0) 100%);
+        width: 100%;
+        height: 1000px;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    &__h1 {
+        color: rgb(255,225,128);
+        letter-spacing: 0.01em;
+        font-size: 176px;
+        margin: 0;
+        animation: fade-in 3s ease-in-out;
+    }
+    &__h2 {
+        color: white;
+        font-size: 33px;
+        letter-spacing: 0.2em;
+        margin: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
