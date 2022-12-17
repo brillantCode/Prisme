@@ -27,7 +27,7 @@ header {
         color: white;
         font-family: 'Roboto', sans-serif;
     }
-    &__p {
+    &__a {
         width: 10%;
         height: 90px;
         font-size: 2em;
@@ -39,7 +39,7 @@ header {
         font-family: 'Roboto', sans-serif;
         transition: .5s ease-out;
         animation: fade-in 3s ease-in-out;
-        cursor: pointer;
+        text-decoration: none;
         &:hover {
             color: rgb(94,94,94);
         }
@@ -119,13 +119,11 @@ header {
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 18%;
+            width: 25%;
             &__num {
                 color: white;
                 line-height: normal;
                 text-align: center;
-                width: 100%;
-                height: 90px;
                 font-size: 80px;
                 margin: 0;
                 overflow: hidden;
@@ -138,21 +136,124 @@ header {
     }
 }
 
+.projets {
+    background-color: black;
+    width: 100%;
+    height: 1260px;
+    margin: 0;
+    padding: 0;
+    &__bg {
+        background: radial-gradient(circle at 11.1865234375% 29.94140625%, #ffebaa 0%, 35%, rgba(255, 235, 170, 0) 50%);
+        width: 100%;
+        height: 1260px;
+    }
+    &__h2 {
+        color: rgb(140,140,140);
+        text-align: center;
+        font-size: 40px;
+        letter-spacing: 0.12em;
+        margin: 0;
+        padding-top: 64px;
+    }
+    &__column {
+        margin-top: 48px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    &__round {
+        margin: 2px;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        background: rgb(140,140,140);
+    }
+    &__bloc {
+        &--p { 
+            z-index: 1;
+        }
+        &__h3 {
+            letter-spacing: 0.1em;
+            color: rgb(255,255,255);
+            font-size: 24px;
+            padding-left: 32px;
+            position: relative;
+        }
+        &__img {
+            width: 360px;
+            position: relative;
+            &:hover img:nth-child(1) {
+                opacity: 0;
+                transition: ease .5s;
+            }
+            &:hover img:nth-child(2) {
+                opacity: 1;
+            }
+        }
+        &__img img:nth-child(2) {
+            position: absolute;
+            right: 0;
+            opacity: 0;
+            transition: ease .5s;
+        }
+        &__separateur {
+            width: 284px;
+            height: 5px;
+            background-color: rgb(0,234,250);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            margin-left: 32px;
+        }
+        &__num {
+            text-align: right;
+            font-size: 60px;
+            color: white;
+            position: absolute;
+            bottom: 330px;
+            left: 330px;
+        }
+        &__num2 {
+            text-align: right;
+            font-size: 60px;
+            color: white;
+            position: absolute;
+            left: 300px;
+            bottom: 60px;
+        }
+        &--position1 {
+            position: relative;
+            left: 22%;
+            bottom: 200px;
+        }
+        &--position2 {
+            position: relative;
+            left: 40%;
+            bottom: 100px;
+        }
+        &--position3 {
+            position: relative;
+            left: 60%;
+            bottom: 900px;
+        }
+    }
+}
+
 .reveal {
-    width: 0;
+    opacity: 0;
 }
 
 .revealVisible {
-    transform-origin: 0% 50%;
     animation: reveal 1s ease-in-out 1s forwards;
 }
 
 @keyframes reveal {
     0% {
-        width: 0;
+        opacity: 1;
+        clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
     }
     100% {
-        width: 100%;
+        opacity: 1;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
 }
 
