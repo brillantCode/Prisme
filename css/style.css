@@ -139,7 +139,7 @@ header {
 .projets {
   background-color: black;
   width: 100%;
-  height: 1260px;
+  height: 1300px;
   margin: 0;
   padding: 0;
 }
@@ -147,6 +147,7 @@ header {
   background: radial-gradient(circle at 11.1865234375% 29.94140625%, #ffebaa 0%, 35%, rgba(255, 235, 170, 0) 50%);
   width: 100%;
   height: 1260px;
+  overflow: hidden;
 }
 .projets__h2 {
   color: rgb(140, 140, 140);
@@ -169,15 +170,12 @@ header {
   border-radius: 2px;
   background: rgb(140, 140, 140);
 }
-.projets__bloc--p {
-  z-index: 1;
-}
 .projets__bloc__h3 {
   letter-spacing: 0.1em;
   color: rgb(255, 255, 255);
   font-size: 24px;
   padding-left: 32px;
-  position: relative;
+  width: 300px;
 }
 .projets__bloc__img {
   width: 360px;
@@ -189,6 +187,10 @@ header {
 }
 .projets__bloc__img:hover img:nth-child(2) {
   opacity: 1;
+}
+.projets__bloc--imgAfter {
+  top: -160px;
+  left: -30px;
 }
 .projets__bloc__img img:nth-child(2) {
   position: absolute;
@@ -210,30 +212,66 @@ header {
   color: white;
   position: absolute;
   bottom: 330px;
-  left: 330px;
+  left: 320px;
 }
 .projets__bloc__num2 {
   text-align: right;
   font-size: 60px;
   color: white;
   position: absolute;
-  left: 300px;
-  bottom: 60px;
+  left: 280px;
+  top: 70px;
+}
+.projets__bloc__num3 {
+  text-align: right;
+  font-size: 60px;
+  color: white;
+  position: absolute;
+  left: 220px;
+  bottom: 340px;
 }
 .projets__bloc--position1 {
   position: relative;
-  left: 22%;
+  left: 16%;
   bottom: 200px;
 }
 .projets__bloc--position2 {
   position: relative;
-  left: 40%;
-  bottom: 100px;
+  left: 38%;
+  bottom: 60px;
 }
 .projets__bloc--position3 {
   position: relative;
-  left: 60%;
-  bottom: 900px;
+  left: 63%;
+  bottom: 960px;
+}
+
+.services {
+  width: 100%;
+  height: 820px;
+  background-color: #000000;
+}
+.services__bg {
+  width: 100%;
+  height: 820px;
+  background: radial-gradient(circle at 2.1891276042% 0%, #000000 0%, 19.8%, rgba(0, 0, 0, 0) 66%), radial-gradient(circle at 50.1057942708% 100%, #FFEBAA 0%, 7.8%, rgba(255, 235, 170, 0) 26%), radial-gradient(circle at 48.9013671875% 49.521484375%, rgba(255, 255, 255, 0) 0%, 100%, rgba(255, 255, 255, 0) 100%);
+}
+.services__cube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.services__bloc {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.services__bloc__icon {
+  font-size: 200px;
+  color: rgb(255, 225, 128);
 }
 
 .reveal {
